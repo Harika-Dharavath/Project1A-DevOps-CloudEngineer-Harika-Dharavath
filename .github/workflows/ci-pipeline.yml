@@ -95,7 +95,10 @@ jobs:
        # ✅ Install Terraform
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
-
+  
+      - name: Check Terraform Version
+        run: terraform version
+        
       - name: Terraform Format Check
         run: |
          cd pipeline/terraform
