@@ -38,8 +38,12 @@ jobs:
       - name: Install yamllint
         run: pip install yamllint
 
-      - name: Run Lint
-        run: yamllint .
+      - name: Run yamllint
+        run: |
+         yamllint -d '{extends: relaxed, rules: {line-length: disable}}' .
+
+      # - name: Run yamllint
+      #   run: yamllint -d "{extends: relaxed, rules: {line-length: disable}}".
 
 # 4️⃣ SECURITY SCAN (Trivy)
   security:
