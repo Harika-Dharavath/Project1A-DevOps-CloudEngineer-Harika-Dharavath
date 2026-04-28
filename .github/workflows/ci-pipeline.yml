@@ -90,14 +90,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: dast
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Terraform Format Check
-      run: terraform fmt -check
-      working-directory: pipeline/terraform
+      - name: Terraform Format Check
+        run: terraform fmt -check
+        working-directory: pipeline/terraform
 
 
-
+ 
   # compliance:
   #   runs-on: ubuntu-latest
   #   needs: dast
