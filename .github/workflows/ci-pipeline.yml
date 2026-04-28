@@ -98,11 +98,11 @@ jobs:
   
       - name: Check Terraform Version
         run: terraform version
-        
+
       - name: Terraform Format Check
         run: |
-         cd pipeline/terraform
-         terraform fmt -check
+          cd pipeline/terraform
+          terraform fmt -check
       
 
  
