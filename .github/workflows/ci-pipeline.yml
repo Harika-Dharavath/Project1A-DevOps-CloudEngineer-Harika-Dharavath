@@ -22,11 +22,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # - name: Setup Java
+      #   uses: actions/setup-java@v4
+      #   with:
+      #     java-version: '17'
+
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
-
+         distribution: 'temurin'   
+         java-version: '17'
       - name: Build & Unit Test
         run: mvn clean verify
 
