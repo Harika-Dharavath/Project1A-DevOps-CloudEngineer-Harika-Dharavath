@@ -124,7 +124,9 @@ jobs:
 
    steps:
     - uses: actions/checkout@v4
-
+    
+    - name: Debug Image Name
+      run: echo ${{ env.IMAGE_NAME }}
     # ✅ Build image again
     - name: Build Docker Image
       run: docker build -t ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} .
