@@ -51,7 +51,7 @@ jobs:
     needs: sast
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Build Docker Image
         run: docker build -t $IMAGE_NAME:$IMAGE_TAG .
 
