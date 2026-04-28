@@ -93,9 +93,10 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Terraform Format Check
-        run: terraform fmt -check
-        working-directory: pipeline/terraform
-
+        run: |
+         cd pipeline/terraform
+         terraform fmt -check
+      
 
  
   # compliance:
