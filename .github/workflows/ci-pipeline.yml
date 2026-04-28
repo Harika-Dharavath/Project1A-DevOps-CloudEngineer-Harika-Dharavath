@@ -40,7 +40,7 @@ jobs:
 
       - name: Run yamllint
         run: |
-           yamllint -d '{extends: relaxed, rules: {line-length: disable}}' . || true
+          yamllint -d '{extends: relaxed, rules: {line-length: disable}}' . || true
 
       # - name: Run yamllint
       #   run: yamllint -d "{extends: relaxed, rules: {line-length: disable}}".
