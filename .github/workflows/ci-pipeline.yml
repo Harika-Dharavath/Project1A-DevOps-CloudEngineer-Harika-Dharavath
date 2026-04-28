@@ -94,7 +94,8 @@ jobs:
 
       - name: Terraform Format Check
         run: terraform fmt -check
-        working-directory: terraform/
+        working-directory: pipeline/terraform
+    
 
 # 8️⃣ DEPLOY (Push Image)
   deploy:
